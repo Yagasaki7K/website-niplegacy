@@ -9,9 +9,10 @@ const Header = () => {
             <div className="rightSide">
                 <ul>
                     <li><h1>NIP Legacy</h1></li>
-                    <li><a href="#">Sobre</a></li>
-                    <li><a href="#">Preços</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#prices">Preços</a></li>
                     <li><a href="#">Download</a></li>
+                    <li><a href="https://discord.gg/CYbrHdYaRm">Discord</a></li>
                 </ul>
 
                 <h1 className="title">Explore o Mundo de <span>N</span>aruto <span>I</span>nner <span>P</span>ower Legacy nesta Experiência de MMORPG 2D!</h1>
@@ -93,11 +94,12 @@ const HeaderDetails = styled.div`
                 text-decoration: none;
                 font-weight: bold;
                 font-size: 1.2rem;
-                transition: 0.2s;
+                transition: 1s;
             }
 
             a:hover {
                 box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                transform: scale(1.02);
             }
 
             i {

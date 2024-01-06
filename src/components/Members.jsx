@@ -21,6 +21,10 @@ const Members = () => {
                     <h3>+200K</h3>
                     <p>Cashs Enviados</p>
                 </div>
+                <div className="item">
+                    <h3>+20</h3>
+                    <p>Horas de Eventos EXP</p>
+                </div>
             </div>
         </MembersDetails>
     )
@@ -38,7 +42,7 @@ const MembersDetails = styled.div`
         justify-content: space-between;
         align-items: center;
         text-align: center;
-        padding: 0 22%;
+        padding: 0 15%;
 
         .item {
             h3 {
