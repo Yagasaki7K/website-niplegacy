@@ -8,10 +8,11 @@ const Prices = () => {
                 Vendemos itens e eventos para facilitar a vida do jogador ou até mesmo, dar acesso a requisitos
                 e funcionalidades que não são obtidas de forma natural dentro do game. Seja adquirindo um personagem exclusivo,
                 obtendo eventos de EXP ou até mesmo comprando um item que te dá acesso a uma área secreta, você pode fazer tudo isso
-                através da nossa loja.
+                através da nossa loja*.
             </p>
 
             <p className="description">O pagamento é feito através do PIX diretamente ao desenvolvedor do game.</p>
+            <p className="description"><i>*Os preços podem sofrer alterações sem avisos prévios.</i></p>
 
             <div className="collection">
                 <div className="item">
@@ -38,7 +39,7 @@ const Prices = () => {
                     <div className="subitem">
                         <img src="/favicon.png" alt="" />
                         <h3>Personagens Especiais</h3>
-                        <p>Madara, Itachi, Pain, Hashirama, Raikage e Sasori</p>
+                        <p>Básicos + Madara, Itachi, Pain, Hashirama, Raikage e Sasori</p>
                         <p>Preço: R$20,00/cada ou R$50,00 Completo</p>
                         <a href="https://wa.me/5519998018174?text=Eu%20estou%20interessado%20em%20adquirir%20o%20Personagem%20Especiais" target="_blank" rel="noreferrer">Comprar</a>
                     </div>
@@ -107,10 +108,30 @@ const Prices = () => {
                 <div className="item">
                     <div className="subitem">
                         <img src="/favicon.png" alt="" />
+                        <h3>Pack Friendship</h3>
+                        <p>2X Vip Kindred - 30 dias (Um para presentear) + 2x 20k de Cash (Um para presentear) + 5x Booster Event (1 hora a escolha)</p>
+                        <p>Preço: R$ 70,00</p>
+                        <a href="https://wa.me/5519998018174?text=Eu%20estou%20interessado%20em%20adquirir%20o%20Pack%20Friendship" target="_blank" rel="noreferrer">Comprar</a>
+                    </div>
+                </div>
+
+                <div className="item">
+                    <div className="subitem">
+                        <img src="/favicon.png" alt="" />
                         <h3>Set Rikudou</h3>
-                        <p>Protetor Rikudou (R$25) + Armadura Rikudou (R$25) + Capacete Rikudou (R$25)  + 15x Booster Event</p>
+                        <p>Protetor Rikudou (R$25) + Armadura Rikudou (R$25) + Capacete Rikudou (R$25) / (255 All Stats)  + 15x Booster Event</p>
                         <p>Preço: R$ 75,00</p>
                         <a href="https://wa.me/5519998018174?text=Eu%20estou%20interessado%20em%20adquirir%20o%20Set%20Rikudou" target="_blank" rel="noreferrer">Comprar</a>
+                    </div>
+                </div>
+
+                <div className="item">
+                    <div className="subitem">
+                        <img src="/favicon.png" alt="" />
+                        <h3>Set Kindred</h3>
+                        <p>Protetor Kindred (R$30) + Armadura Kindred (R$30) + Capacete Kindred (R$30) + Espada Kindred (R$30) / (500 All Stats) + 20x Booster Event </p>
+                        <p>Preço: R$ 120,00</p>
+                        <a href="https://wa.me/5519998018174?text=Eu%20estou%20interessado%20em%20adquirir%20o%20Set%20Kindred" target="_blank" rel="noreferrer">Comprar</a>
                     </div>
                 </div>
 
@@ -130,8 +151,8 @@ const Prices = () => {
 export default Prices
 
 const PricesDetails = styled.div`
-    background: #212332;
-    color:  #f3f3f4;
+    background: #f3f3f4;
+    color:  #212332;
     padding: 2rem 10rem;
     display: flex;
     justify-content: center;
@@ -139,9 +160,42 @@ const PricesDetails = styled.div`
     text-align: center;
     flex-direction: column;
 
+    @media (max-width: 768px) {
+        padding: 2rem 1rem;
+
+        .collection {
+            padding: 0 1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 0;
+
+            .item {
+                margin-left: 2rem;
+
+                p {
+                    width: 100%;
+                }
+
+                a {
+                    width: 200px;
+                }
+            }
+        }
+
+        .description {
+            width: 100%;
+        }
+    }
+
     .description {
         width: 75%;
-        margin-top: 1rem;
+        margin: 0.5rem 0;
+
+        i {
+            font-size: 0.8rem;
+        }
     }
 
     h3 {
@@ -149,8 +203,7 @@ const PricesDetails = styled.div`
     }
 
     .collection {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        display: flex;
         justify-content: center;
         align-items: center;
         flex-wrap: wrap;
@@ -163,43 +216,43 @@ const PricesDetails = styled.div`
         flex-direction: row;
         margin-top: 3rem;
 
-        img {
-            border-radius: 50%;
-            width: 150px;
-            height: 150px;
-            transition: 0.5s;
-        }
-
-        img:hover {
-            box-shadow: 0 0 15px #ff8f51;
-        }
-
         .subitem {
             margin-right: 2rem;
-        }
 
-        p {
-            margin-bottom: 1rem;
-            max-width: 300px;
-        }
+            img {
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+                transition: 0.5s;
+            }
 
-        a {
-            background: #ff8f51;
-            color: #212332;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1rem;
-            border-radius: 5px;
-            transition: 0.2s;
-            margin-top: 1rem;
-            width: 100px;
-            padding: 0.5rem;
-            transition: 0.5s;
-        }
+            img:hover {
+                box-shadow: 0 0 15px #ff8f51;
+            }
 
-        a:hover {
-            filter: brightness(110%);
-            color: #fff;
+            p {
+                margin-bottom: 1rem;
+                width: 300px;
+            }
+
+            a {
+                background: #ff8f51;
+                color: #212332;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 1rem;
+                border-radius: 5px;
+                transition: 0.2s;
+                margin-top: 1rem;
+                width: 100px;
+                padding: 0.5rem;
+                transition: 0.5s;
+            }
+
+            a:hover {
+                filter: brightness(110%);
+                color: #fff;
+            }
         }
     }
 `

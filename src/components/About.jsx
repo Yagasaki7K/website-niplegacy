@@ -2,8 +2,8 @@ import styled from "styled-components"
 
 const About = () => {
     return (
-        <AboutDetails>
-            <div className="left" id="about">
+        <AboutDetails id="about">
+            <div className="left">
                 <h1>Sobre nós</h1>
 
                 <h4>O que é o <span>N</span>aruto <span>I</span>nner <span>P</span>ower?</h4>
@@ -32,6 +32,21 @@ const AboutDetails = styled.div`
     align-items: center;
     padding: 5rem 10rem;
     text-align: center;
+    background: #f3f3f4;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        padding: 1rem 1rem;
+
+        .left {
+            margin-left: 5rem;
+            width: 100%;
+        }
+
+        .right {
+            margin-top: 2rem;
+        }
+    }
 
     h1 {
         margin-top: -1rem;
@@ -51,10 +66,6 @@ const AboutDetails = styled.div`
         color: #ff8f51;
     }
 
-    span {
-        color: #ff8f51;
-    }
-
     .left {
         max-width: 768px;
         margin-right: 5rem;
@@ -64,7 +75,7 @@ const AboutDetails = styled.div`
         img {
             width: 80%;
             border-radius: 20px;
-            transition: 0.5s;
+            transition: 1s;
         }
 
         &:hover {

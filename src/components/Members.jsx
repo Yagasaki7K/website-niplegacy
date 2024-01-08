@@ -19,11 +19,11 @@ const Members = () => {
                 </div>
                 <div className="item">
                     <h3>+200K</h3>
-                    <p>Cashs Enviados</p>
+                    <p>Cash Enviados</p>
                 </div>
                 <div className="item">
-                    <h3>+20</h3>
-                    <p>Horas de Eventos EXP</p>
+                    <h3>1.0.2</h3>
+                    <p>Versão do Game</p>
                 </div>
             </div>
         </MembersDetails>
@@ -43,6 +43,14 @@ const MembersDetails = styled.div`
         align-items: center;
         text-align: center;
         padding: 0 15%;
+
+        @media (max-width: 768px) {
+            flex-direction: column;
+            
+            p {
+                margin-bottom: 2rem;
+            }
+        }
 
         .item {
             h3 {
